@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RickFlix - Movie Player</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="dark">
+  <header>
+    <h1>🎬 RickFlix</h1>
+    <p>Choose your movie and start watching!</p>
+    <button id="themeToggle">🌙</button>
+  </header>
+
+  <main>
+    <section class="video-player">
+      <video id="moviePlayer" controls autoplay>
+        <source id="videoSource" src="https://pixeldrain.com/api/file/EZMr49sp" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </section>
+
+    <section class="movie-grid">
+      <div class="movie-card" onclick="playMovie('EZMr49sp')">
+        <img src="Saiyaara.jpg" alt="Saiyaara Poster">
+        <p>Saiyaara</p>
+      </div>
+      <div class="movie-card" onclick="playMovie('FFDbLbxM')">
+        <img src="kabirsingh.jpg" alt="Kabir Singh Poster">
+        <p>Kabir Singh</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 RickFlix. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

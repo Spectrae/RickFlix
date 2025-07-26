@@ -1,0 +1,98 @@
+:root {
+  --bg-dark: #0f0f0f;
+  --bg-light: #ffffff;
+  --text-dark: #ffffff;
+  --text-light: #1a1a1a;
+  --card-bg-dark: #1e1e1e;
+  --card-bg-light: #f1f1f1;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+body.dark {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+body.light {
+  background-color: var(--bg-light);
+  color: var(--text-light);
+}
+
+header {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: none;
+  position: relative;
+}
+
+#themeToggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+main {
+  padding: 2rem 1rem;
+}
+
+.video-player {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+video {
+  width: 90%;
+  max-width: 900px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  background: #000;
+}
+
+.movie-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.movie-card {
+  width: 200px;
+  background-color: var(--card-bg-dark);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+body.light .movie-card {
+  background-color: var(--card-bg-light);
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+}
+
+.movie-card img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
